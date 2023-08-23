@@ -1,0 +1,18 @@
+.blog-links {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 80px 0;
+}
+
+.blog-links h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.blog-list a {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}

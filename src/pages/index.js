@@ -1,28 +1,24 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import './App.css';
 
-import styles from './index.module.css';
+import Navigation from './components/Navigation';
+import Hero from './components/Hero';
+import FeatureSection from './components/FeatureSection';
+import BlogLinks from './components/BlogLinks';
+import TestimonialCard from './components/TestimonialCard';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function App() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
+    <div className="App">
+      <Navigation />
+      <Hero />
+      <FeatureSection />
+      <BlogLinks />
+      <TestimonialCard />
+      {/* Add more sections as needed */}
+    </div>
   );
 }
 
@@ -32,9 +28,8 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <App />
       </main>
     </Layout>
   );
